@@ -17,8 +17,8 @@ function Contact() {
                         <div className="contact-box bg-transparent border-0">
                             <i className='ri-map-pin-line icon'></i>
                             <h5>Address</h5>
-                            <p>Rendom IT Solutions, 2nd Floor, Siddharth Complex,</p>
-                            <p className='mb-4'>Alkapuri, Vadorara, Gujarat - 39007</p>
+                            <p>140 Le Trong Tan</p>
+                            <p className='mb-4'>P. Tay Thanh, Q. Tan Phu, TP. Ho Chi Minh</p>
                             <a href="" target='_blank' rel='noopener noreferrer' className='link'>Get Direction</a>
                         </div>
                     </div>

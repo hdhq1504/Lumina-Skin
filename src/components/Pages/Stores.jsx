@@ -38,7 +38,7 @@ function Stores() {
               <div className="col-md-6 mb-4">
                 <h5 className="subtitle fw-semibold mb-4">Hour of operation</h5>
                 <div className="d-flex gap-5 text-muted">
-                  <span>Mon -Fri</span>
+                  <span>Mon - Fri</span>
                   <span>08:30 - 20:00</span>
                 </div>
                 <div className="d-flex gap-5 text-muted">
@@ -86,7 +86,7 @@ function Stores() {
               <div className="col-md-6 mb-4">
                 <h5 className="subtitle fw-semibold mb-4">Hour of operation</h5>
                 <div className="d-flex gap-5 text-muted">
-                  <span>Mon -Fri</span>
+                  <span>Mon - Fri</span>
                   <span>08:30 - 20:00</span>
                 </div>
                 <div className="d-flex gap-5 text-muted">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import productsData from "../../Product.json";
@@ -7,11 +7,24 @@ import productsData from "../../Product.json";
 function Shop() {
     const[filterSortOption, setFilterSortOption] = useState('all');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // Lấy từ khóa tìm kiếm từ query string
+    const searchParams = new URLSearchParams(location.search);
+    const searchKeyword = searchParams.get('search')?.toLowerCase() || '';
 
     const handleFilterSort = () => {
         let filtered = [...productsData];
 
-        if (filterSortOption === 'new' || filterSortOption === 'sale') {
+        // Lọc theo từ khóa
+        if (searchKeyword) {
+            filtered = filtered.filter(product =>
+                product.productName.toLowerCase().includes(searchKeyword) ||
+                (product.description && product.description.toLowerCase().includes(searchKeyword))
+            );
+        }
+
+        if (filterSortOption === 'New' || filterSortOption === 'Sale') {
             filtered = filtered.filter(product => product.tag === filterSortOption);
         }
 
@@ -82,8 +95,8 @@ function Shop() {
                                 onChange={(e) => setFilterSortOption(e.target.value)}
                             >
                                 <option value="all">All Products</option>
-                                <option value="new">New Products</option>
-                                <option value="sale">Sale Products</option>
+                                <option value="New">New Products</option>
+                                <option value="Sale">Sale Products</option>
                                 <option value="low">Price: Low to High</option>
                                 <option value="high">Price: High to Low</option>
                             </select>

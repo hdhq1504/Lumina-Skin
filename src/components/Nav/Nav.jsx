@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Nav() {
   const [cartCount, setCartCount] = useState();
   const [wishlistCount, setWishlistCount] = useState();
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const updateCounts = () => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -12,6 +14,13 @@ function Nav() {
     const totalCartItems = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
     setCartCount(totalCartItems);
     setWishlistCount(wishlist.length);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim() !== "") {
+      navigate(`/shop?search=${encodeURIComponent(searchTerm)}`);
+    }
   };
 
   useEffect(() => {
@@ -62,9 +71,19 @@ function Nav() {
           {/* Mobile Icon */}
           <ul className="d-lg-none d-flex align-items-center gap-3">
             <li className="nav-item">
-              <a href="#">
-                <i className="bi bi-search fs-5 text-dark"></i>
-              </a>
+              <form onSubmit={handleSearch} className="d-flex align-items-center">
+                <input
+                  type="text"
+                  className="form-control form-control-sm search-bar-input"
+                  style={{ width: 100 }}
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                />
+                <button type="submit" className="btn p-0 ms-1 search-bar-btn">
+                  <i className="bi bi-search fs-5 text-dark"></i>
+                </button>
+              </form>
             </li>
             <li className="nav-item">
               <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
@@ -122,9 +141,19 @@ function Nav() {
             {/* Right Navbar */}
             <ul className="navbar-nav d-none d-lg-flex align-items-center gap-4">
               <li className="nav-item">
-                <a href="#">
-                  <i className="bi bi-search fs-5 text-dark"></i>
-                </a>
+                <form onSubmit={handleSearch} className="d-flex align-items-center">
+                  <input
+                    type="text"
+                    className="form-control form-control-sm search-bar-input"
+                    style={{ width: 150 }}
+                    placeholder="Search products..."
+                    value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+                  />
+                  <button type="submit" className="btn p-0 ms-1 search-bar-btn">
+                    <i className="bi bi-search fs-5 text-dark"></i>
+                  </button>
+                </form>
               </li>
               <li className="nav-item">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
@@ -176,7 +205,42 @@ function Nav() {
                 <button type="button" className="btn btn-dark w-100">Sign Up</button>
               </form>
               <div className="text-center mt-3">
-                <p>Already have an account? <a href="#" className="text-success fw-bold">Sign In</a></p>
+                <p>Already have an account? <a href="#" className="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal" onClick={() => document.getElementById('signupModal').classList.remove('show')}>Sign In</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sign In Modal */}
+      <div className="modal fade" id="signinModal" tabIndex='-1' aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content p-4">
+            <div className="modal-header border-0">
+              <h5 className="modal-title fw-bold" id="signinModalLabel">Sign In</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <form>
+                <div className="mb-3">
+                  <label className="form-label">Email</label>
+                  <input type="email" className="form-control" placeholder="Enter email address" required />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Password</label>
+                  <input type="password" className="form-control" placeholder="Enter password" required />
+                </div>
+                <div className="d-flex justify-content-between mb-3">
+                  <div className="form-check">
+                    <input type="checkbox" className="form-check-input" id="rememberMe" />
+                    <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
+                  </div>
+                  <a href="#" className="text-success text-decoration-none">Forgot Password?</a>
+                </div>
+                <button type="button" className="btn btn-dark w-100">Sign In</button>
+              </form>
+              <div className="text-center mt-3">
+                <p>Don't have an account? <a href="#" className="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal" onClick={() => document.getElementById('signinModal').classList.remove('show')}>Sign Up</a></p>
               </div>
             </div>
           </div>
