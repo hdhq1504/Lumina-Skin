@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Tips & Procedure To Apply Luxury Beauty Cosmetic Cream",
+    "title": "Natural Cleansers",
+    "image": "/images/blog-1.webp",
+    "author": "Anna Nguyen",
+    "date": "01/06/2025"
+  },
+  {
+    "id": 2,
+    "name": "The Best Way To Select Good High-End Cosmetic Products",
+    "title": "Cosmetics",
+    "image": "/images/blog-2.webp",
+    "author": "Linh Tran",
+    "date": "03/06/2025"
+  },
+  {
+    "id": 3,
+    "name": "Lightweight Makeup To Enhance Your Natural Beauty",
+    "title": "Make Up",
+    "image": "/images/blog-3.webp",
+    "author": "Minh Pham",
+    "date": "05/06/2025"
+  },
+  {
+    "id": 4,
+    "name": "Herbal Ingredients And Their Role In Beauty Creams",
+    "title": "Natural Cleansers",
+    "image": "/images/blog-4.webp",
+    "author": "Quyen Le",
+    "date": "07/06/2025"
+  },
+  {
+    "id": 5,
+    "name": "All Essential Nutrients Your Skin Requires At Night",
+    "title": "Natural Cleansers",
+    "image": "/images/blog-5.webp",
+    "author": "Bao Chau",
+    "date": "09/06/2025"
+  },
+  {
+    "id": 6,
+    "name": "How To Find The Best Brow Shape For Your Face",
+    "title": "Make Up",
+    "image": "/images/blog-6.webp",
+    "author": "Tuan Anh",
+    "date": "11/06/2025"
+  },
+  {
+    "id": 7,
+    "name": "evening-routine",
+    "title": "Building an Effective Evening Routine",
+    "image": "/images/blog-7.webp",
+    "author": "Mai Huong",
+    "date": "13/06/2025"
+  },
+  {
+    "id": 8,
+    "name": "sensitive-skin-care",
+    "title": "Caring for Sensitive Skin",
+    "image": "/images/blog-8.webp",
+    "author": "Duc Hoang",
+    "date": "15/06/2025"
+  },
+  {
+    "id": 9,
+    "name": "mask-benefits",
+    "title": "The Benefits of Face Masks",
+    "image": "/images/blog-9.webp",
+    "author": "Phuong Linh",
+    "date": "17/06/2025"
+  },
+  {
+    "id": 10,
+    "name": "oily-skin-solutions",
+    "title": "Solutions for Oily Skin",
+    "image": "/images/blog-10.webp",
+    "author": "Khanh Duong",
+    "date": "19/06/2025"
+  },
+  {
+    "id": 11,
+    "name": "vitamin-c-benefits",
+    "title": "Vitamin C: The Super Ingredient",
+    "image": "/images/blog-11.webp",
+    "author": "Thu Ha",
+    "date": "20/06/2025"
+  },
+  {
+    "id": 12,
+    "name": "men-skincare",
+    "title": "Skincare for Men: What to Know",
+    "image": "/images/blog-12.webp",
+    "author": "Hieu Nguyen",
+    "date": "21/06/2025"
+  }
+]
