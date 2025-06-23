@@ -1,22 +1,19 @@
 import React, { useState } from 'react'
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import productsData from "../../Product.json";
 
 function Shop() {
     const[filterSortOption, setFilterSortOption] = useState('all');
-    const navigate = useNavigate();
     const location = useLocation();
 
-    // Lấy từ khóa tìm kiếm từ query string
     const searchParams = new URLSearchParams(location.search);
     const searchKeyword = searchParams.get('search')?.toLowerCase() || '';
 
     const handleFilterSort = () => {
         let filtered = [...productsData];
 
-        // Lọc theo từ khóa
         if (searchKeyword) {
             filtered = filtered.filter(product =>
                 product.productName.toLowerCase().includes(searchKeyword) ||
@@ -45,10 +42,10 @@ function Shop() {
           const updated = [...existing, product];
           localStorage.setItem('wishlist', JSON.stringify(updated));
           window.dispatchEvent(new Event('wishlistUpdated'));
-          toast.success(`${product.productName} added to your wishlist`);
+          toast.success("Đã được thêm vào wishlist");
         }
         else {
-          toast.info(`${product.productName} is already in your wishlist`);
+          toast.info("Đã có trong wishlist");
         }
     };
     
@@ -61,10 +58,10 @@ function Shop() {
           const updatedCart = [...existing, updatedProduct];
           localStorage.setItem('cart', JSON.stringify(updatedCart));
           window.dispatchEvent(new Event('cartUpdated'));
-          toast.success(`${product.productName} added to your cart`);
+          toast.success("Đã được thêm vào giỏ hàng");
         }
         else {
-          toast.info(`${product.productName} is already in your cart`);
+          toast.info("Đã có trong giỏ hàng");
         }
     };
 
@@ -74,18 +71,18 @@ function Shop() {
     <>
         <ol className='section-banner py-3 position-relative'>
             <li className='position-relative'><Link to='/'>Home</Link></li>
-            <li className='position-relative active'><span className='ps-5'>Products</span></li>
+            <li className='position-relative active'><span className='ps-5'>Sản phẩm</span></li>
         </ol>
 
         <div className="shop-container">
             <div className="container">
-                <h1 className="text-center py-4 fw-semibold">Products</h1>
+                <h1 className="text-center py-4 fw-semibold">Tất cả sản phẩm</h1>
 
                 <div className="container my-4">
                     <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div className='text-muted' style={{ fontSize:'1.1rem' }}>
-                            Showing <strong>{displayedProducts.length}</strong> product{displayedProducts.length != 1 && 's'} for "
-                            {filterSortOption === 'all' ? 'All' : filterSortOption.charAt(0).toUpperCase() + filterSortOption.slice(1)}"
+                            Hiển thị <strong>{displayedProducts.length}</strong> sản phẩm cho "
+                            {filterSortOption === 'all' ? 'Tất cả' : filterSortOption === 'New' ? 'Mới' : filterSortOption === 'Sale' ? 'Giảm giá' : filterSortOption === 'low' ? 'Giá thấp đến cao' : 'Giá cao đến thấp'}"
                         </div>
                         <div>
                             <select 
@@ -94,11 +91,11 @@ function Shop() {
                                 value={filterSortOption}
                                 onChange={(e) => setFilterSortOption(e.target.value)}
                             >
-                                <option value="all">All Products</option>
-                                <option value="New">New Products</option>
-                                <option value="Sale">Sale Products</option>
-                                <option value="low">Price: Low to High</option>
-                                <option value="high">Price: High to Low</option>
+                                <option value="all">Tất cả sản phẩm</option>
+                                <option value="New">Sản phẩm mới</option>
+                                <option value="Sale">Sản phẩm giảm giá</option>
+                                <option value="low">Giá: Thấp đến cao</option>
+                                <option value="high">Giá: Cao đến thấp</option>
                             </select>
                         </div>
                     </div>
@@ -113,14 +110,14 @@ function Shop() {
                                         <img src={product.image} alt="product" className="img-fluid" />
                                         <img src={product.secondImage} alt="product" className="img-fluid" />
                                         <div className="product-icons gap-3">
-                                            <div className="product-icon" title="Add to Wishlist" onClick={() => addToWishlist(product)}>
+                                            <div className="product-icon" title="Thêm vào yêu thích" onClick={() => addToWishlist(product)}>
                                                 <i className="bi bi-heart fs-5"></i>
                                             </div>
-                                            <div className="product-icon" title="Add to Cart" onClick={() => addToCart(product)}>
+                                            <div className="product-icon" title="Thêm vào giỏ hàng" onClick={() => addToCart(product)}>
                                                 <i className="bi bi-cart3 fs-5"></i>
                                             </div>
                                         </div>
-                                        <span className={`tag badge text-white ${product.tag === 'New' ? 'bg-danger' : 'bg-success'}`}>
+                                        <span className={`tag badge text-white ${product.tag === 'Mới' ? 'bg-danger' : 'bg-success'}`}>
                                             {product.tag}
                                         </span>
                                     </div>

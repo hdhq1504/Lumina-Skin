@@ -8,11 +8,11 @@ function Blog() {
     <>
       <ol className="section-banner py-3 position-relative">
         <li className="position-relative"><Link to="/">Home</Link></li>
-        <li className="position-relative active"><a href="#" className="ps-5">News</a></li>
+        <li className="position-relative active"><a href="#" className="ps-5">Tin Tức</a></li>
       </ol>
 
       <div className="container">
-        <h1 className="text-center py-4 fw-semibold">News</h1>
+        <h1 className="text-center py-4 fw-semibold">Tin Tức</h1>
         <div className="row">
           {blogs.map(blog => (
             <div className="col-lg-4 col-md-6 mb-0">

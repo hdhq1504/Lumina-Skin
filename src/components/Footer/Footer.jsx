@@ -15,59 +15,59 @@ function Footer() {
                 <div className="col-lg-8">
                     <div className="row">
                         <div className="col-md-4">
-                            <h3 className="mb-3">Company</h3>
-                            <p className="mb-0">Find a location nearest</p>
-                            <p className="mb-4">you. See <strong>Our Stores</strong></p>
+                            <h3 className="mb-3">Công ty</h3>
+                            <p className="mb-0">Tìm cửa hàng gần bạn nhất</p>
+                            <p className="mb-4">Xem <strong>Hệ thống cửa hàng</strong></p>
                             <p className="mb-0"><strong>+84 931318657</strong></p>
                             <p>hoquan15042004@gmail.com</p>
                         </div>
 
                         <div className="col-md-4">
-                            <h3 className="mb-3">Useful Links</h3>
+                            <h3 className="mb-3">Liên kết hữu ích</h3>
                             <ul className="list-unstyled">
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- New Products</a>
+                                    <a href="#" className="text-decoration-none">- Sản phẩm mới</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Best Sellers</a>
+                                    <a href="#" className="text-decoration-none">- Bán chạy nhất</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Bundle & Save</a>
+                                    <a href="#" className="text-decoration-none">- Combo tiết kiệm</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Online Gift Card</a>
+                                    <a href="#" className="text-decoration-none">- Thẻ quà tặng online</a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="col-md-4">
-                            <h3 className="mb-3">Information</h3>
+                            <h3 className="mb-3">Thông tin</h3>
                             <ul className="list-unstyled">
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Start A Return</a>
+                                    <a href="#" className="text-decoration-none">- Đổi trả hàng</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Contact Us</a>
+                                    <a href="#" className="text-decoration-none">- Liên hệ</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Shipping FAQ</a>
+                                    <a href="#" className="text-decoration-none">- Câu hỏi vận chuyển</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Terms & Conditions</a>
+                                    <a href="#" className="text-decoration-none">- Điều khoản & Điều kiện</a>
                                 </li>
                                 <li className="mb-2">
-                                    <a href="#" className="text-decoration-none">- Privacy Policy</a>
+                                    <a href="#" className="text-decoration-none">- Chính sách bảo mật</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-4">
-                    <h3 className="mb-4">Good emails.</h3>
-                    <p className="mb-5">Enter your email below to be the first to know about new collections and product launches</p>
+                    <h3 className="mb-4">Nhận ưu đãi qua email</h3>
+                    <p className="mb-5">Nhập email để là người đầu tiên biết về bộ sưu tập và sản phẩm mới</p>
                     <div className="subscribe-box d-flex">
-                        <input type="email" className="form-control" placeholder="Enter your email address" />
-                        <button className="btn">Subscribe</button>
+                        <input type="email" className="form-control" placeholder="Nhập email của bạn" />
+                        <button className="btn" style={{width:'110px'}}>Đăng ký</button>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@ function Footer() {
                         <div className="col-lg-4">
                             <div className="footer-logo text-center">
                                 <a href="#" className="navbar-brand mx-auto order-0">
-                                    <h2 className="m-0 fw-bold" style={{ letterSpacing:'2px' }}>LUMINA SKIN</h2>
+                                    <h2 className="m-0 fw-bold" style={{ letterSpacing:'2px' }}>LUMINASKIN</h2>
                                 </a>
                             </div>
                         </div>

@@ -3,128 +3,128 @@
         "id": 1,
         "image": "/images/product-1-1.webp",
         "secondImage": "/images/product-1-2.webp",
-        "productName": "Shield Conditioner",
-        "price": "$27.00",
+        "productName": "Dầu xả Shield",
+        "price": "270,000₫",
         "tag": "New"
     },
     {
         "id": 2,
         "image": "/images/product-2-1.webp",
         "secondImage": "/images/product-2-2.webp",
-        "productName": "Perfecting Facial Oil",
-        "price": "$15.00",
-        "oldPrice": "$21.00",
+        "productName": "Dầu dưỡng hoàn hảo cho da mặt",
+        "price": "150,000₫",
+        "oldPrice": "210,000₫",
         "tag": "Sale"
     },
     {
         "id": 3,
         "image": "/images/product-3-1.webp",
         "secondImage": "/images/product-3-2.webp",
-        "productName": "Enriched Hand & Body Wash",
-        "price": "$23.00",
+        "productName": "Sữa tắm & rửa tay dưỡng chất",
+        "price": "230,000₫",
         "tag": "New"
     },
     {
         "id": 4,
         "image": "/images/product-4-1.webp",
         "secondImage": "/images/product-4-2.webp",
-        "productName": "Shield Shampoo",
-        "price": "$39.00",
-        "oldPrice": "$60.00",
+        "productName": "Dầu gội Shield",
+        "price": "390,000₫",
+        "oldPrice": "600,000₫",
         "tag": "Sale"
     },
     {
         "id": 5,
         "image": "/images/product-5-1.webp",
         "secondImage": "/images/product-5-2.jpg",
-        "productName": "Enriched Hand Wash",
-        "price": "$25.00",
-        "oldPrice": "$85.00",
+        "productName": "Nước rửa tay dưỡng chất",
+        "price": "250,000₫",
+        "oldPrice": "850,000₫",
         "tag": "Sale"
     },
     {
         "id": 6,
         "image": "/images/product-6-1.webp",
         "secondImage": "/images/product-6-2.webp",
-        "productName": "Enriched Duo",
-        "price": "$27.00"
+        "productName": "Bộ đôi dưỡng chất",
+        "price": "270,000₫"
     },
     {
         "id": 7,
         "image": "/images/product-7-1.webp",
         "secondImage": "/images/product-7-2.webp",
-        "productName": "Shield Spray",
-        "price": "$37.00"
+        "productName": "Xịt Shield",
+        "price": "370,000₫"
     },
     {
         "id": 8,
         "image": "/images/product-8-1.webp",
         "secondImage": "/images/product-8-2.webp",
-        "productName": "Nourishing Eye Cream",
-        "price": "$19.00"
+        "productName": "Kem dưỡng mắt",
+        "price": "190,000₫"
     },
     {
         "id": 9,
         "image": "/images/product-9-1.webp",
         "secondImage": "/images/product-9-2.webp",
-        "productName": "Nourishing Moisture Wash",
-        "price": "$35.00"
+        "productName": "Sữa rửa mặt dưỡng ẩm",
+        "price": "350,000₫"
     },
     {
         "id": 10,
         "image": "/images/product-10-1.webp",
         "secondImage": "/images/product-10-2.webp",
-        "productName": "Moisturizing Polishing Treatment",
-        "price": "$45.00",
-        "oldPrice": "$75.00",
+        "productName": "Tẩy tế bào chết dưỡng ẩm",
+        "price": "450,000₫",
+        "oldPrice": "750,000₫",
         "tag": "Sale"
     },
     {
         "id": 11,
         "image": "/images/product-11-1.webp",
         "secondImage": "/images/product-11-2.webp",
-        "productName": "Scalp Moisturizing Cream",
-        "price": "$29.00"
+        "productName": "Kem dưỡng ẩm da đầu",
+        "price": "290,000₫"
     },
     {
         "id": 12,
         "image": "/images/product-12-1.webp",
         "secondImage": "/images/product-12-2.webp",
-        "productName": "Natural Coconut Cleansing Oil",
-        "price": "$21.00"
+        "productName": "Dầu tẩy trang dừa tự nhiên",
+        "price": "210,000₫"
     },
     {
         "id": 13,
         "image": "/images/product-13-1.webp",
         "secondImage": "/images/product-13-2.webp",
-        "productName": "Sideway Travel Case Set",
-        "price": "$19.00"
+        "productName": "Bộ hộp du lịch Sideway",
+        "price": "190,000₫"
     },
     {
         "id": 14,
         "image": "/images/product-14-1.webp",
         "secondImage": "/images/product-14-2.webp",
-        "productName": "Untangling Comb",
-        "price": "$110.00",
-        "oldPrice": "$130.00",
+        "productName": "Lược gỡ rối",
+        "price": "1,100,000₫",
+        "oldPrice": "1,300,000₫",
         "tag": "Sale"
     },
     {
         "id": 15,
         "image": "/images/product-15-1.webp",
         "secondImage": "/images/product-15-2.webp",
-        "productName": "Vacation Travel Case Set",
-        "price": "$43.00",
-        "oldPrice": "$85.00",
+        "productName": "Bộ hộp du lịch Vacation",
+        "price": "430,000₫",
+        "oldPrice": "850,000₫",
         "tag": "Sale"
     },
     {
         "id": 16,
         "image": "/images/product-16-1.webp",
         "secondImage": "/images/product-16-2.webp",
-        "productName": "Vaulted Mirror",
-        "price": "$17.00",
-        "oldPrice": "$22.00",
+        "productName": "Gương Vaulted",
+        "price": "170,000₫",
+        "oldPrice": "220,000₫",
         "tag": "Sale"
     }
 ]

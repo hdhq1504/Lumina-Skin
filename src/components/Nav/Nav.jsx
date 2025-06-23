@@ -65,7 +65,7 @@ function Nav() {
 
           {/* Mobile Logo */}
           <Link to='/' className="navbar-brand mx-auto order-0 d-lg-none d-flex">
-            <h2 className="m-0 fw-bold" style={{ letterSpacing: "2px" }}>LUMINA SKIN</h2>
+            <h2 className="m-0 fw-bold" style={{ letterSpacing: "2px" }}>LUMINASKIN</h2>
           </Link>
 
           {/* Mobile Icon */}
@@ -112,7 +112,7 @@ function Nav() {
             {/* Left Navbar */}
             <Link to='/' className="navbar-brand order-0 d-none d-lg-flex">
               <h2 className="m-0 fw-bold" style={{ letterSpacing: "2px" }}>
-                LUMINA SKIN
+                LUMINASKIN
               </h2>
             </Link>
 
@@ -141,22 +141,22 @@ function Nav() {
             {/* Right Navbar */}
             <ul className="navbar-nav d-none d-lg-flex align-items-center gap-4">
               <li className="nav-item">
-                <form onSubmit={handleSearch} className="d-flex align-items-center">
+                <form onSubmit={handleSearch} className="d-flex align-items-center position-relative">
                   <input
                     type="text"
-                    className="form-control form-control-sm search-bar-input"
-                    style={{ width: 150 }}
-                    placeholder="Search products..."
+                    className="form-control form-control-sm search-bar-input pe-5"
+                    style={{ width: 200 }}
+                    placeholder="Tìm kiếm..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                   />
-                  <button type="submit" className="btn p-0 ms-1 search-bar-btn">
+                  <button type="submit" className="p-0 search-bar-btn position-absolute end-0 top-50 translate-middle-y me-2">
                     <i className="bi bi-search fs-5 text-dark"></i>
                   </button>
                 </form>
               </li>
               <li className="nav-item">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#signinModal">
                   <i className="bi bi-person fs-5 text-dark"></i>
                 </a>
               </li>
@@ -182,30 +182,30 @@ function Nav() {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content p-4">
             <div className="modal-header border-0">
-              <h5 className="modal-title fw-bold" id="signupModalLabel">Sign Up</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 className="modal-title fw-bold" id="signupModalLabel">Đăng ký</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
             </div>
             <div className="modal-body">
               <form>
                 <div className="mb-3">
-                  <label className="form-label">Name</label>
-                  <input type="text" className="form-control" placeholder="Enter your name" required />
+                  <label className="form-label">Họ và tên</label>
+                  <input type="text" className="form-control" placeholder="Nhập họ tên của bạn" required />
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Email</label>
-                  <input type="email" className="form-control" placeholder="Enter email address" required />
+                  <input type="email" className="form-control" placeholder="Nhập địa chỉ email" required />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Password</label>
-                  <input type="password" className="form-control" placeholder="Enter password" required />
+                  <label className="form-label">Mật khẩu</label>
+                  <input type="password" className="form-control" placeholder="Nhập mật khẩu" required />
                 </div>
                 <p className="text-muted">
-                  By signing up, you agree to our <a href="#" className="text-success text-decoration-none">Terms</a> & <a href="#" className="text-success text-decoration-none">Privacy Policy</a>
+                  Khi đăng ký, bạn đã đồng ý với <a href="#" className="text-success text-decoration-none">Điều khoản</a> & <a href="#" className="text-success text-decoration-none">Chính sách bảo mật</a>
                 </p>
-                <button type="button" className="btn btn-dark w-100">Sign Up</button>
+                <button type="button" className="btn btn-dark w-100">Đăng ký</button>
               </form>
               <div className="text-center mt-3">
-                <p>Already have an account? <a href="#" className="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal" onClick={() => document.getElementById('signupModal').classList.remove('show')}>Sign In</a></p>
+                <p>Đã có tài khoản? <a href="#" className="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#signinModal" onClick={() => document.getElementById('signupModal').classList.remove('show')}>Đăng nhập</a></p>
               </div>
             </div>
           </div>
@@ -217,30 +217,30 @@ function Nav() {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content p-4">
             <div className="modal-header border-0">
-              <h5 className="modal-title fw-bold" id="signinModalLabel">Sign In</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 className="modal-title fw-bold" id="signinModalLabel">Đăng nhập</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
             </div>
             <div className="modal-body">
               <form>
                 <div className="mb-3">
                   <label className="form-label">Email</label>
-                  <input type="email" className="form-control" placeholder="Enter email address" required />
+                  <input type="email" className="form-control" placeholder="Nhập địa chỉ email" required />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Password</label>
-                  <input type="password" className="form-control" placeholder="Enter password" required />
+                  <label className="form-label">Mật khẩu</label>
+                  <input type="password" className="form-control" placeholder="Nhập mật khẩu" required />
                 </div>
                 <div className="d-flex justify-content-between mb-3">
                   <div className="form-check">
                     <input type="checkbox" className="form-check-input" id="rememberMe" />
-                    <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
+                    <label className="form-check-label" htmlFor="rememberMe">Ghi nhớ đăng nhập</label>
                   </div>
-                  <a href="#" className="text-success text-decoration-none">Forgot Password?</a>
+                  <a href="#" className="text-success text-decoration-none">Quên mật khẩu?</a>
                 </div>
-                <button type="button" className="btn btn-dark w-100">Sign In</button>
+                <button type="button" className="btn btn-dark w-100">Đăng nhập</button>
               </form>
               <div className="text-center mt-3">
-                <p>Don't have an account? <a href="#" className="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal" onClick={() => document.getElementById('signinModal').classList.remove('show')}>Sign Up</a></p>
+                <p>Chưa có tài khoản? <a href="#" className="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal" onClick={() => document.getElementById('signinModal').classList.remove('show')}>Đăng ký</a></p>
               </div>
             </div>
           </div>

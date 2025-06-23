@@ -14,7 +14,7 @@ import team3 from "../../assets/team-3.webp";
 
 const About = () => {
     const [quote, setQuote] = useState(
-        '"Quality products at great prices, delivering the perfect mix of affordability and excellence. Each item ensures great value for money."'
+        '"Sản phẩm chất lượng với giá cả tuyệt vời, mang đến sự kết hợp hoàn hảo giữa tiết kiệm và xuất sắc. Mỗi sản phẩm đều đảm bảo giá trị vượt trội."'
     )
 
   return (
@@ -24,8 +24,8 @@ const About = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 text-md-start text-center">
-                        <p className="text-uppercase text-muted small-mb-2">Introducing</p>
-                        <h1 className="fw-bold display-5">About Glowing</h1>
+                        <p className="text-uppercase text-muted small-mb-2">Giới thiệu</p>
+                        <h1 className="fw-bold display-5">Về Glowing</h1>
                     </div>
                 </div>
             </div>
@@ -35,13 +35,10 @@ const About = () => {
             <div className="container text-center mb-5">
                 <img src={head} alt="" />
                 <h2 className="fw-bold">
-                    We strive to live with compassion, <br /> kindness and empathy
+                    Chúng tôi luôn sống với sự đồng cảm, <br /> tử tế và thấu hiểu
                 </h2>
                 <p className="text-muted mx-auto" style={{ maxWidth:'600px' }}>
-                    A lot of so-called stretch denim pants out there are just sweatpants - they get baggy
-                    and lose their shape. Not cool. Our tightly knitted fabric holds its form after
-                    repeated wear. Plus, Aldays dress up or down, no prob. So you can wear them all day.
-                    Get it?
+                    Nhiều loại quần denim co giãn ngoài kia thực chất chỉ là quần thể thao - chúng bị giãn và mất dáng. Không ổn chút nào. Chất vải dệt chặt của chúng tôi giữ form sau nhiều lần mặc. Ngoài ra, Aldays có thể mặc đi chơi hay đi làm đều phù hợp. Bạn hiểu ý chứ?
                 </p>
             </div>
 
@@ -51,12 +48,9 @@ const About = () => {
                         <img src={about1} alt="Face" className="img-fluid rounded" />
                     </div>
                     <div className="col-md-6">
-                        <h4 className="fw-bold">Give your skin a healthy glow everyone</h4>
+                        <h4 className="fw-bold">Cho làn da bạn luôn rạng rỡ khỏe mạnh</h4>
                         <p className="text-muted">
-                            Nourish your skin with radiant hydration. Our skincare essentials are crafted
-                            with premium ingredients to restore balance, enhance glow, and keep your 
-                            complexion healthy every day. Experience the perfect blend of nourishment and 
-                            luxury for a naturally luminous look.
+                            Nuôi dưỡng làn da bạn với độ ẩm rạng rỡ. Các sản phẩm chăm sóc da của chúng tôi được tạo nên từ những thành phần cao cấp giúp cân bằng, tăng cường độ sáng và giữ cho làn da luôn khỏe mạnh mỗi ngày. Trải nghiệm sự kết hợp hoàn hảo giữa dưỡng chất và sự sang trọng cho vẻ ngoài tự nhiên rạng rỡ.
                         </p>
                     </div>
                 </div>
@@ -68,12 +62,9 @@ const About = () => {
                         <img src={about2} alt="Products" className="img-fluid rounded" />
                     </div>
                     <div className="col-md-6">
-                        <h4 className="fw-bold">Our Mission</h4>
+                        <h4 className="fw-bold">Sứ mệnh của chúng tôi</h4>
                         <p className="text-muted">
-                            We believe in healthy, radiant skin for everyone. Our products are thoughtfully
-                            crafted with high-quality ingredients to nourish, protect, and enhance your natural 
-                            glow—because confidence starts with great skin. Experience the perfect fusion of 
-                            science and nature for skincare that truly transforms.
+                            Chúng tôi tin vào làn da khỏe mạnh, rạng rỡ cho tất cả mọi người. Sản phẩm của chúng tôi được chế tạo tỉ mỉ với thành phần chất lượng cao để nuôi dưỡng, bảo vệ và tôn lên vẻ đẹp tự nhiên—bởi vì sự tự tin bắt đầu từ làn da tuyệt vời. Trải nghiệm sự kết hợp hoàn hảo giữa khoa học và thiên nhiên cho làn da thực sự thay đổi.
                         </p>
                     </div>
                 </div>
@@ -91,9 +82,7 @@ const About = () => {
                     <div 
                         className="col-6 col-sm-4 col-md-2 d-flex justify-content-center brands-img"
                         onClick={() => setQuote(
-                            '"Quality products at great prices, delivering the perfect \
-                            mix of affordability and excellence. Each item ensures great \
-                            value for money."'
+                            '"Sản phẩm chất lượng với giá cả tuyệt vời, mang đến sự kết hợp hoàn hảo giữa tiết kiệm và xuất sắc. Mỗi sản phẩm đều đảm bảo giá trị vượt trội."'
                         )}
                         style={{ cursor:'pointer' }}
                     >
@@ -102,9 +91,7 @@ const About = () => {
                     <div 
                         className="col-6 col-sm-4 col-md-2 d-flex justify-content-center brands-img"
                         onClick={() => setQuote(
-                            '"Great beauty service! The experience was truly \
-                            amazing, and I feel more confident and radiant with \
-                            my beauty after every visit."'
+                            '"Dịch vụ làm đẹp tuyệt vời! Trải nghiệm thực sự tuyệt vời, tôi cảm thấy tự tin và rạng rỡ hơn sau mỗi lần ghé thăm."'
                         )}
                         style={{ cursor:'pointer' }}
                     >
@@ -113,9 +100,7 @@ const About = () => {
                     <div 
                         className="col-6 col-sm-4 col-md-2 d-flex justify-content-center brands-img"
                         onClick={() => setQuote(
-                            '"Amazing product. The results are so transformative \
-                            in texture and my face feels plump and healthy. \
-                            Highly recommend!"'
+                            '"Sản phẩm tuyệt vời. Kết quả thay đổi rõ rệt về kết cấu, da mặt tôi căng mọng và khỏe mạnh. Rất đáng để thử!"'
                         )}
                         style={{ cursor:'pointer' }}
                     >
@@ -124,9 +109,7 @@ const About = () => {
                     <div 
                         className="col-6 col-sm-4 col-md-2 d-flex justify-content-center brands-img"
                         onClick={() => setQuote(
-                            '"Quality products at great prices, delivering the perfect \
-                            mix of affordability and excellence. Each item ensures great \
-                            value for money."'
+                            '"Sản phẩm chất lượng với giá cả tuyệt vời, mang đến sự kết hợp hoàn hảo giữa tiết kiệm và xuất sắc. Mỗi sản phẩm đều đảm bảo giá trị vượt trội."'
                         )}
                         style={{ cursor:'pointer' }}
                     >
@@ -135,9 +118,7 @@ const About = () => {
                     <div 
                         className="col-6 col-sm-4 col-md-2 d-flex justify-content-center brands-img"
                         onClick={() => setQuote(
-                            '"Great beauty service! The experience was truly \
-                            amazing, and I feel more confident and radiant with \
-                            my beauty after every visit."'
+                            '"Dịch vụ làm đẹp tuyệt vời! Trải nghiệm thực sự tuyệt vời, tôi cảm thấy tự tin và rạng rỡ hơn sau mỗi lần ghé thăm."'
                         )}
                         style={{ cursor:'pointer' }}
                     >
@@ -146,9 +127,7 @@ const About = () => {
                     <div 
                         className="col-6 col-sm-4 col-md-2 d-flex justify-content-center brands-img"
                         onClick={() => setQuote(
-                            '"Amazing product. The results are so transformative \
-                            in texture and my face feels plump and healthy. \
-                            Highly recommend!"'
+                            '"Sản phẩm tuyệt vời. Kết quả thay đổi rõ rệt về kết cấu, da mặt tôi căng mọng và khỏe mạnh. Rất đáng để thử!"'
                         )}
                         style={{ cursor:'pointer' }}
                     >
@@ -161,7 +140,7 @@ const About = () => {
         {/* Team Section */}
         <section className="team-section">
             <h2 className="team-title">
-                We pride ourselves on having a team of highly skilled
+                Chúng tôi tự hào có đội ngũ chuyên gia giàu kinh nghiệm
             </h2>
 
             <div className="team-row">
@@ -176,7 +155,7 @@ const About = () => {
                         </div>
                     </div>
                     <h3 className="team-name">Ho Duc Hoang Quan</h3>
-                    <p className="team-role">- Founder, Chief Creative</p>
+                    <p className="team-role">- Nhà sáng lập, Giám đốc sáng tạo</p>
                 </div>
                 <div className="team-member">
                     <div className="team-image-wrapper">
@@ -189,7 +168,7 @@ const About = () => {
                         </div>
                     </div>
                     <h3 className="team-name">Ho Duc Hoang Quan</h3>
-                    <p className="team-role">- Founder, Chief Creative</p>
+                    <p className="team-role">- Nhà sáng lập, Giám đốc sáng tạo</p>
                 </div>
                 <div className="team-member">
                     <div className="team-image-wrapper">
@@ -202,7 +181,7 @@ const About = () => {
                         </div>
                     </div>
                     <h3 className="team-name">Ho Duc Hoang Quan</h3>
-                    <p className="team-role">- Founder, Chief Creative</p>
+                    <p className="team-role">- Nhà sáng lập, Giám đốc sáng tạo</p>
                 </div>
             </div>
         </section>

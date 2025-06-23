@@ -35,23 +35,23 @@ function Cart() {
   };
 
   const totalPrice = cartItems.reduce((acc, item) => {
-    const price = parseFloat(item.price.replace("$", ""));
+    const price = Number(item.price.replace(/[^\d]/g, ''));
     return acc + price * item.quantity;
   }, 0);
 
   return (
     <>
       <ol className="section-banner py-3 position-relative">
-        <li className="position-relative"><Link to="/">Home</Link></li>
-        <li className="position-relative active"><a href="#" className="ps-5">Cart</a></li>
+        <li className="position-relative"><Link to="/">Trang chủ</Link></li>
+        <li className="position-relative active"><a href="#" className="ps-5">Giỏ hàng</a></li>
       </ol>
 
       <div className="container my-5">
-        <h2 className="text-center mb-4 fw-bold">🧡 Your Cart</h2>
+        <h2 className="text-center mb-4 fw-bold">🧡 Giỏ hàng của bạn</h2>
         {cartItems.length === 0 ? (
             <div className="text-center">
-                <p className="lead">Your Cart Is Empty.</p>
-                <Link to='/shop' className="btn mt-3">Back To Shop</Link>
+                <p className="lead">Giỏ hàng của bạn đang trống.</p>
+                <Link to='/shop' className="btn mt-3">Quay lại cửa hàng</Link>
             </div>
         ) : (
             <div className="row g-4">
@@ -65,14 +65,14 @@ function Cart() {
                                 <div className="col-9 d-flex flex-column flex-md-row justify-content-between align-items-center">
                                     <div className="text-start w-100">
                                         <h5 className="mb-2">{item.productName}</h5>
-                                        <p className='text-muted mb-1'>Price{item.price}</p>
-                                        <p className='text-muted mb-0'>Total ${(parseFloat(item.price.replace('$', '')) * item.quantity).toFixed(2)}</p>
+                                        <p className='text-muted mb-1'>Giá: {item.price}</p>
+                                        <p className='text-muted mb-0'>Tổng: {(Number(item.price.replace(/[^\d]/g, '')) * item.quantity).toLocaleString('vi-VN')}₫</p>
                                     </div>
                                     <div className="d-flex aling-items-center gap-3 mt-3 mt-md-0">
                                         <button className="btn btn-sm" onClick={() => updateQuantity(item.id, 'decrease')}>-</button>
                                         <span>{item.quantity}</span>
                                         <button className="btn btn-sm" onClick={() => updateQuantity(item.id, 'increase')}>+</button>
-                                        <button className="btn btn-sm" onClick={() => removeItem(item.id)}>Remove</button>
+                                        <button className="btn btn-sm" onClick={() => removeItem(item.id)}>Xóa</button>
                                     </div>
                                 </div>
                             </div>
@@ -82,17 +82,17 @@ function Cart() {
 
                 <div className="col-lg-4">
                     <div className="card border-0 shadow-sm rounded-4 p-4">
-                        <h4 className="fw-bold">Cart Summary</h4>
+                        <h4 className="fw-bold">Tóm tắt giỏ hàng</h4>
                         <hr />
                         <div className="d-flex justify-content-between mb-2">
-                            <span>Total Items</span>
+                            <span>Tổng số sản phẩm</span>
                             <span>{cartItems.length}</span>
                         </div>
                         <div className="d-flex justify-content-between mb-2">
-                            <span>Total Price</span>
-                            <span className="fw-bold">${totalPrice.toFixed(2)}</span>
+                            <span>Tổng tiền</span>
+                            <span className="fw-bold">{totalPrice.toLocaleString('vi-VN')}₫</span>
                         </div>
-                        <Link to='/checkout' className="btn w-100">Proceed To Checkout</Link>
+                        <Link to='/checkout' className="btn w-100">Tiến hành thanh toán</Link>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ function Wishlist() {
     setWishlist(updatedWishlist);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
     window.dispatchEvent(new Event('cartUpdated'));
-    toast.error('item removed from wishlist');
+    toast.error('Đã được xóa khỏi wishlist');
   }
 
   const addToCart = (product) => {
@@ -39,7 +39,7 @@ function Wishlist() {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
     window.dispatchEvent(new Event('cartUpdated'));
 
-    toast.success(`${product.productName} added to your cart`, {
+    toast.success(`Đã được thêm vào wishlist`, {
       position: 'top-right',
       autoClose: 2000,
       hideProgressBar: false,
@@ -58,13 +58,13 @@ function Wishlist() {
       </ol>
 
       <div className="container my-5">
-        <h2 className="text-center fw-bold mb-4">🧡 Your Wishlist</h2>
+        <h2 className="text-center fw-bold mb-4">🧡 Wishlist của bạn</h2>
 
         {wishlist.length === 0 ? (
           <div className='text-center'>
-            <p className='lead text-muted'>Your Wishlist Is Empty.</p>
+            <p className='lead text-muted'>Wishlist của bạn đang trống.</p>
             <Link to='/shop' className='btn'>
-              <i className='ri-shopping-bag-line me-2'></i>Browse Products
+              <i className='ri-shopping-bag-line me-2'></i>Xem sản phẩm
             </Link>
           </div>
         ) : (
@@ -86,10 +86,10 @@ function Wishlist() {
                     <h5 className='card-title'>{product.productName}</h5>
                     <div className="mt-auto d-flex justify-content-between gap-2">
                       <button className="btn w-100" onClick={() => addToCart(product)}>
-                        <i className='ri-shopping-cart-2-line me-1'>Add To Cart</i>
+                        <i className='ri-shopping-cart-2-line me-1'></i>Thêm vào
                       </button>
                       <button className="btn w-100" onClick={() => removeFromWishlist(product.id)}>
-                        <i className='ri-shopping-cart-2-line me-1'>Remove</i>
+                        <i className='ri-shopping-cart-2-line me-1'></i>Xóa
                       </button>
                     </div>
                   </div>
