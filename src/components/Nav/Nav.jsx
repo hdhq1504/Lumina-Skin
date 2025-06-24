@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 function Nav() {
@@ -50,7 +51,7 @@ function Nav() {
     <>
       {/* Navbar */}
       <div className="nav w-100 fixed-top bg-white shadow-sm">
-        <nav className="navbar navbar-expand-lg py-3 justify-content-between align-items-center w-100 nav-wrapper">
+        <nav className="navbar navbar-expand-lg py-2 justify-content-between align-items-center w-100 nav-wrapper">
           <button
             className="navbar-toggler"
             type="button"
@@ -65,7 +66,7 @@ function Nav() {
 
           {/* Mobile Logo */}
           <Link to='/' className="navbar-brand mx-auto order-0 d-lg-none d-flex">
-            <h2 className="m-0 fw-bold" style={{ letterSpacing: "2px" }}>LUMINASKIN</h2>
+            <img src={logo} alt="" width="64px" />
           </Link>
 
           {/* Mobile Icon */}
@@ -111,9 +112,7 @@ function Nav() {
           >
             {/* Left Navbar */}
             <Link to='/' className="navbar-brand order-0 d-none d-lg-flex">
-              <h2 className="m-0 fw-bold" style={{ letterSpacing: "2px" }}>
-                LUMINASKIN
-              </h2>
+              <img src={logo} alt="" width="64px" />
             </Link>
 
             {/* Navbar */}

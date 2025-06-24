@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/logo.png";
 import payment1 from "./../../assets/payment-1.svg";
 import payment2 from "./../../assets/payment-2.svg";
 import payment3 from "./../../assets/payment-3.svg";
@@ -87,7 +88,7 @@ function Footer() {
                         <div className="col-lg-4">
                             <div className="footer-logo text-center">
                                 <a href="#" className="navbar-brand mx-auto order-0">
-                                    <h2 className="m-0 fw-bold" style={{ letterSpacing:'2px' }}>LUMINASKIN</h2>
+                                    <img src={logo} alt="" width="64px" />
                                 </a>
                             </div>
                         </div>

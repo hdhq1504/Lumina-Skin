@@ -42,7 +42,7 @@ function Cart() {
   return (
     <>
       <ol className="section-banner py-3 position-relative">
-        <li className="position-relative"><Link to="/">Trang chủ</Link></li>
+        <li className="position-relative"><Link to="/">Home</Link></li>
         <li className="position-relative active"><a href="#" className="ps-5">Giỏ hàng</a></li>
       </ol>
 
